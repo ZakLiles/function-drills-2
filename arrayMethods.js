@@ -82,8 +82,8 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 // CODE HERE
-//const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
-
+const myStrongest = monstersInYourPocket.filter(monster => monster["CP"] > 200)
+console.log(myStrongest)
 
 
 ////////// PROBLEM 5 //////////
@@ -100,7 +100,8 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 */
 
 // CODE HERE
-
+const totals = orders.map(order => Math.round(order["price"]*(1+order["tax"])*100)/100)
+console.log(totals)
 
 
 ////////// PROBLEM 6 //////////
