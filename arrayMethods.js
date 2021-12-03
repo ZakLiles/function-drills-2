@@ -121,3 +121,5 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
+const bobsTotal = purchases.filter(purchase => purchase["owner"]==="Bob").reduce((acc,purchase) => acc + purchase["price"], 0)
+console.log(bobsTotal);
