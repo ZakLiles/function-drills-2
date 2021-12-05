@@ -171,15 +171,16 @@ var users = [
 // Do not edit the code above.
 
 // CODE HERE 
+const getUserById = (users, id, cb) => cb(users.find(user => user.id === id))
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+getUserById(users, '16t', user => {
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+})
 
 ////////// CHALLENGE //////////
 
@@ -198,6 +199,7 @@ var users = [
 */
 
 // CODE HERE
+const addingFactory = num1 => num2 => num1 + num2
 
 /*
   Now that you have addingFactory, you can create other
@@ -212,6 +214,7 @@ var users = [
 */
 
 // CODE HERE
+const addTen = addingFactory(10)
 
 /*
   Now the inner function is stored in the addTen variable! 
@@ -224,6 +227,7 @@ var users = [
 */
 
 // CODE HERE
+console.log(addTen(13));
 
 /*
   Let's make another function from the addingFactory. 
@@ -237,3 +241,6 @@ var users = [
 */
 
 // CODE HERE
+const addFiftyTwo = addingFactory(52);
+
+console.log(addFiftyTwo(13));
