@@ -103,6 +103,7 @@ contains(names, 'Colt', result => {
 */
 
 // CODE HERE
+const uniq = (arr, cb) => cb([...new Set(arr)])
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -112,7 +113,9 @@ contains(names, 'Colt', result => {
 */
 
 // CODE HERE
-
+uniq(names, uniqArr => {
+  console.log(`The new names array with all the duplicated items removed is ${uniqArr}`)
+})
 
 
 ////////// PROBLEM 6 //////////
@@ -123,7 +126,7 @@ contains(names, 'Colt', result => {
 */
 
 // CODE HERE 
-
+const each = (names, cb) => names.forEach((element,index) => cb(element,index))
 
 /*
   Invoke the each function, passing in the names array and a callback function.
@@ -133,7 +136,9 @@ contains(names, 'Colt', result => {
 */
 
 // CODE HERE
-
+each(names, (item, index) => {
+  console.log(`The item at index ${index} is ${item}`)
+})
 
 ////////// PROBLEM 7 //////////
 
